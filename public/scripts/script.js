@@ -7,6 +7,7 @@ let closeBtn = document.querySelector(".closeBtn");
 
 window.addEventListener("scroll", () => {
 	heroSection.classList.toggle("blurred", window.scrollY > 50);
+	console.log(scrollPosition);
 });
 
 addBtn.addEventListener("click", () => {
