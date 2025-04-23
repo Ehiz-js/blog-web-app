@@ -26,14 +26,14 @@
 			</div>
 
 			<ul class="nav-links">
-				<li class="nav-btn"><a href="/views/body.ejs">Home</a></li>
-				<li class="nav-btn"><a href="/views/post.ejs">Create</a></li>
-				<li class="nav-btn"><a href="/views/pricing.ejs">Post</a></li>
+				<li class="nav-btn"><a href="#hero">Home</a></li>
+				<li class="nav-btn"><a href="#create">Create</a></li>
+				<li class="nav-btn"><a href="#post">Post</a></li>
 				<li class="nav-btn"><a href="/views/about.ejs">About</a></li>
 				<li class="nav-btn sign-in"><a href="/sign.ejs">Sign in</a></li>
 			</ul>
 		</nav>
-		<section class="hero">
+		<section class="hero" id="hero">
 			<div class="hero-container">
 				<h2>Our Blog</h2>
 				<h1>
@@ -47,7 +47,7 @@
 				</p>
 			</div>
 		</section>
-		<section class="create">
+		<section class="create" id="create">
 			<div class="create-header">
 				<h2>Create Posts</h2>
 				<button class="addBtn">Add <i class="fa-solid fa-plus"></i></button>
@@ -85,6 +85,21 @@
 				<img src="images/sectionbg3.jpg" alt="benefits card image 1" />
 				<h2>Smoother Debugging</h2>
 				<p>A problem shared is a problem solved, same for a problem posted.</p>
+			</div>
+		</section>
+
+		<section class="post" id="post">
+			<div class="create-header">
+				<h2>Latest Posts</h2>
+			</div>
+			<div class="post-container">
+				<div class="post-card">
+					<p><%= post %></p>
+					<div class="post-card-icons">
+						<i class="fa-solid fa-pen-to-square"></i>
+						<i class="fa-solid fa-trash"></i>
+					</div>
+				</div>
 			</div>
 		</section>
 

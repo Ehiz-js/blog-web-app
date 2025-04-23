@@ -13,7 +13,16 @@ app.use(express.static("public"));
 //ROUTES
 //root get route
 app.get("/", (req, res) => {
-	res.render("body.ejs");
+	res.render("body.ejs", { post: "" });
+});
+
+//take posts from form
+app.post("/submit", (req, res) => {
+	const userPost = req.body.postInput;
+	console.log(userPost);
+	let data = { post: userPost };
+
+	res.render("body.ejs", data);
 });
 
 //SERVER INITIALIZE
