@@ -1,10 +1,13 @@
 //
 let heroSection = document.querySelector(".hero");
 let scrollPosition = window.scrollY;
-let float = document.querySelector(".form");
+let createForm = document.querySelector(".create-form");
 let addBtn = document.querySelector(".addBtn");
 let closeBtn = document.querySelector(".closeBtn");
 let benefitSection = document.querySelector(".benefits");
+let editBtn = document.querySelector(".editBtn");
+let editForm = document.querySelector(".edit-form");
+let editCloseBtn = document.querySelector(".edit-close-btn");
 
 window.addEventListener("scroll", () => {
 	heroSection.classList.toggle("blurred", window.scrollY > 50);
@@ -19,8 +22,15 @@ window.addEventListener("scroll", () => {
 });
 
 addBtn.addEventListener("click", () => {
-	float.style.display = "flex";
+	createForm.style.display = "flex";
 });
 closeBtn.addEventListener("click", () => {
-	float.style.display = "none";
+	createForm.style.display = "none";
+});
+
+editBtn.addEventListener("click", () => {
+	editForm.style.display = "flex";
+});
+editCloseBtn.addEventListener("click", () => {
+	editForm.style.display = "none";
 });

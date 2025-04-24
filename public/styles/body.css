@@ -283,7 +283,7 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border-radius: 5%;
+	border-radius: 15px;
 }
 
 .post-card p {
@@ -294,14 +294,15 @@ nav {
 
 .post-card-icons {
 	margin: 1rem 0rem;
-	font-size: 1.5rem;
-	color: var(--white);
 }
-.post-card-icons i {
+.post-icon {
+	color: var(--white);
 	margin: 0rem 1rem;
 	transition: ease 0.5s;
+	background-color: var(--dark);
+	font-size: 1.5rem;
 }
-.post-card-icons i:hover {
+.post-icon:hover {
 	cursor: pointer;
 	color: var(--medium-color);
 	transform: scale(0.9);

@@ -53,7 +53,7 @@
 				<button class="addBtn">Add <i class="fa-solid fa-plus"></i></button>
 			</div>
 		</section>
-		<section class="form">
+		<section class="form create-form">
 			<form action="/submit" method="POST" class="float">
 				<label for="postInput"
 					>Create A Post
@@ -93,15 +93,37 @@
 				<h2>Latest Posts</h2>
 			</div>
 			<div class="post-container">
+				<% if (data.length === 0) {} else { %> <% data.forEach(data => { %>
 				<div class="post-card">
-					<p><%= post %></p>
+					<p><%= data.post %></p>
 					<div class="post-card-icons">
-						<i class="fa-solid fa-pen-to-square"></i>
-						<i class="fa-solid fa-trash"></i>
+						<form method="POST">
+							<button
+								type="submit"
+								name="post"
+								value="<%=data.post  %>"
+								formaction="/edit"
+								class="post-icon editBtn"
+							>
+								<i class="fa-solid fa-pen-to-square"></i>
+							</button>
+							<button
+								name="id"
+								value="<%=data.count %>"
+								type="submit"
+								formaction="/delete"
+								class="post-icon"
+							>
+								<i class="fa-solid fa-trash"></i>
+							</button>
+						</form>
 					</div>
 				</div>
+
+				<% }); %> <% } %>
 			</div>
 		</section>
+		<%- include("edit.ejs") %>
 
 		<script src="scripts/script.js"></script>
 	</body>
