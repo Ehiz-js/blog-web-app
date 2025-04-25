@@ -307,3 +307,36 @@ nav {
 	color: var(--medium-color);
 	transform: scale(0.9);
 }
+
+.edit-form {
+	display: flex;
+}
+
+footer {
+	display: grid;
+	width: 100%;
+	grid-template: 1fr/1fr 1fr;
+	margin: auto;
+	color: var(--white);
+	background-color: var(--dark);
+	height: 20vh;
+}
+.copyright {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	padding-left: 20%;
+}
+.social-icons {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.social-icons a {
+	font-size: 1.5rem;
+	transition: ease 0.5s;
+}
+.social-icons a:hover {
+	color: black;
+	transform: scale(1.1);
+}

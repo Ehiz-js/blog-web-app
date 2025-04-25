@@ -29,7 +29,7 @@
 				<li class="nav-btn"><a href="#hero">Home</a></li>
 				<li class="nav-btn"><a href="#create">Create</a></li>
 				<li class="nav-btn"><a href="#post">Post</a></li>
-				<li class="nav-btn"><a href="/views/about.ejs">About</a></li>
+				<li class="nav-btn"><a href="#footer">About</a></li>
 				<li class="nav-btn sign-in"><a href="/sign.ejs">Sign in</a></li>
 			</ul>
 		</nav>
@@ -93,7 +93,9 @@
 				<h2>Latest Posts</h2>
 			</div>
 			<div class="post-container">
-				<% if (data.length === 0) {} else { %> <% data.forEach(data => { %>
+				<% if (data.length === 0) { %>
+				<p>Your latest posts will appear here...</p>
+				<%} else { %> <% data.forEach(data => { %>
 				<div class="post-card">
 					<p><%= data.post %></p>
 					<div class="post-card-icons">
@@ -123,7 +125,33 @@
 				<% }); %> <% } %>
 			</div>
 		</section>
-		<%- include("edit.ejs") %>
+		<section id="footer">
+			<footer>
+				<div class="copyright">©Ehizojie Azamegbe</div>
+				<div class="social-icons">
+					<a
+						href="https://linkedin.com/in/ehizojie-azamegbe-082ba52b9"
+						target="_blank"
+						><i class="fa-brands fa-linkedin"></i
+					></a>
+					<a href="https://github.com/Ehiz-js" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://x.com/devycrafter" target="_blank"
+						><i class="fa-brands fa-twitter"></i
+					></a>
+					<a href="https://www.instagram.com/ehiz.xd/" target="_blank"
+						><i class="fa-brands fa-instagram"></i
+					></a>
+					<a href="https://www.youtube.com/@EHIZXD" target="_blank"
+						><i class="fa-brands fa-youtube"></i
+					></a>
+					<a href="https://www.tiktok.com/@ehiz.xd" target="_blank"
+						><i class="fa-brands fa-tiktok"></i
+					></a>
+				</div>
+			</footer>
+		</section>
 
 		<script src="scripts/script.js"></script>
 	</body>

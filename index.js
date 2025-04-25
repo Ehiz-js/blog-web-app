@@ -38,7 +38,9 @@ app.post("/delete", (req, res) => {
 
 app.post("/edit", (req, res) => {
 	const postText = req.body.post;
-	console.log(postText);
+	const userIndex = data.findIndex((user) => user.post === postText);
+	data.splice(userIndex, 1);
+	res.render("edit.ejs", { post: postText });
 });
 
 //SERVER INITIALIZE

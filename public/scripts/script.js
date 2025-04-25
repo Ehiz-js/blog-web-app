@@ -28,9 +28,9 @@ closeBtn.addEventListener("click", () => {
 	createForm.style.display = "none";
 });
 
-editBtn.addEventListener("click", () => {
+/* editBtn.addEventListener("click", () => {
 	editForm.style.display = "flex";
 });
 editCloseBtn.addEventListener("click", () => {
 	editForm.style.display = "none";
-});
+}); */
